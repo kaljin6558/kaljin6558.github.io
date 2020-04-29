@@ -10,4 +10,4 @@
   <h2>선택 성별: <%= request.getParameter("gender")%> <br/></h2>
   </section>
   </section>
-  <body></html>
+  </body></html>
