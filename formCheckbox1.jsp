@@ -1,17 +1,22 @@
-<!doctype html> <!-- formCheckbox1.html -->
+<%@ page language="java" contentType="text/html; charset=UTF-8"pageEncoding="UTF-8"%>
+<% request.setCharacterEncoding("utf-8"); %>
+<!doctype html> <!-- formCheckbox1.jsp -->
 <html><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
 <title>폼 학습</title></head>
 <body>
-<seclion>
-  <form action="http://jsptogo.herokuapp.com/jspsrc/formCheckbox1.jsp" method="post">
-  <fieldset>
-  <legend>취미 선택</legend>
-  <label for="fishing">낚시</label>
-  <input type="checkbox"id="fishing"name="hobby"value="fishing"checked/>
-  <label for="singing">노래</label>
-  <input type="checkbox"id="singing"name="hobby"value="singing"/>
-  <label for="reading">독서</label>
-  <input type="checkbox"id="reading"name="hobby"value="reading"/>
-  <button type="submit">등록</button>
-  </fieldset></form></seclion>
-</body></html>
+<section>
+ <h2>JSP form</h2>
+ <section>
+<% String [] uHobby = request.getParameterValues("hobby"); %></%>
+<h4>
+<%
+if(uHobby == null) { out.println("입력내용없음");
+} else {
+for(int i=0;i<uHobby.length; i++){
+out.println(uHobby[i]);
+}
+}
+</h4>
+</section>
+</body>
+</html>
