@@ -18,6 +18,6 @@ out.println(" <input id='id12' class='class3' type='text' name='sName' size='20'
 <% = request.getParameter("sNumber")%></div>
 <div id="div3">
 <label id="id31" for="id32">전화</label>
-<% = request.getParameter("sPhone")%></div>
+                           <% = request.getParameter("sPhone")%></div></form></section>
 <div id="div4">
 <footer><p>&copy; 20XX Made by Korea. All rights reserved.</p></footer></body></html>
